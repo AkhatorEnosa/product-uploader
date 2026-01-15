@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# Product Uploader – React Native App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple, clean React Native mobile application that allows users to upload up to **5 products**, each containing a name, photo, and price. Once the limit is reached, users are clearly notified and the input form is disabled.
 
-## Get started
+Perfect as a starter project, demo, or learning example for React Native beginners/intermediate developers.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Add products with:
+  - Product name
+  - Price (with proper number formatting)
+  - Photo (picked from device gallery)
+- Maximum limit of **5 products**
+- Real-time counter (X/5)
+- Visual feedback when limit is reached (banner + final alert)
+- Clean, modern card-based product list
+- Input validation & user-friendly error messages
+- Smooth image preview in the picker
+- Responsive and intuitive UI/UX
 
-2. Start the app
+## Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **React Native** (Expo)
+- **Local state management** using React Hooks (`useState`)
+- **Expo Image Picker** for gallery photo selection
+- Pure React Native components + `StyleSheet` for styling
+- No external state libraries (Redux/MobX/Context). Kept deliberately simple
 
-In the output, you'll find options to open the app in a
+> **Note:** While the requirement mentioned using Redux, Context, or similar, this version intentionally uses React's built-in `useState` for maximum simplicity and zero boilerplate — ideal for small apps like this.  
+> You can easily extend it with Context or Redux if desired.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Screenshots
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<!-- Example placeholder -->
+![Home Screen](screenshots/home.png)
+![Form Filled](screenshots/form.png)
+![Limit Reached](screenshots/limit.png)
 
-## Get a fresh project
-
-When you're ready, run:
+## Installation
 
 ```bash
-npm run reset-project
-```
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/product-uploader.git
+cd product-uploader
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# 2. Install dependencies
+npm install
+# or
+yarn install
 
-## Learn more
+# 3. Install Expo CLI globally (if not already installed)
+npm install -g expo-cli
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# 4. Start the development server
+npx expo start
+# or
+npm start
+# or
+yarn start
